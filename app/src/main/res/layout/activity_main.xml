@@ -9,17 +9,31 @@
     tools:context=".MainActivity">
 
     <LinearLayout
+        android:id="@+id/linearLayout5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="match_parent"
+            android:layout_height="299dp"
+            app:srcCompat="@drawable/logo" />
+    </LinearLayout>
+
+    <LinearLayout
         android:id="@+id/linearLayout2"
         android:layout_width="348dp"
         android:layout_height="85dp"
-        android:layout_marginTop="36dp"
         android:orientation="vertical"
         app:layout_constraintBottom_toTopOf="@+id/linearLayout"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.485"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0">
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout5">
 
         <TextView
             android:id="@+id/textView8"
@@ -44,9 +58,9 @@
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.462"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.543">
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout5">
 
         <TextView
             android:id="@+id/textView5"
@@ -59,7 +73,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:background="#DCE6FB"
+            android:background="@drawable/form_editable"
             android:ems="10"
             android:inputType="textPersonName"
             android:minHeight="48dp" />
@@ -75,7 +89,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:background="#DCE6FB"
+            android:background="@drawable/form_editable"
             android:ems="10"
             android:inputType="textPassword"
             android:minHeight="48dp" />
@@ -94,10 +108,9 @@
             android:layout_height="match_parent"
             android:layout_marginTop="10dp"
             android:layout_weight="1"
-            android:backgroundTint="#2E487B"
-            android:text="Iniciar Sesión"
-            android:textColorHighlight="#4CAF50"
-            android:textColorLink="#4CAF50" />
+            android:backgroundTint="#3F51B5"
+            android:radius="15dp"
+            android:text="Iniciar Sesión" />
 
     </LinearLayout>
 
@@ -111,13 +124,13 @@
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout"
-        app:layout_constraintVertical_bias="0.92" />
+        app:layout_constraintVertical_bias="0.76" />
 
     <TextView
         android:id="@+id/Registrarse"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="96dp"
+        android:layout_marginEnd="124dp"
         android:layout_marginBottom="16dp"
         android:text="Registrarse"
         android:textSize="15sp"

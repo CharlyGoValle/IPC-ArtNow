@@ -6,62 +6,51 @@
     android:layout_height="match_parent"
     android:backgroundTint="#2E487B">
 
-    <Button
-        android:id="@+id/Buybtn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginBottom="16dp"
-        android:backgroundTint="#2E487B"
-        android:text="Buy"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <Button
-        android:id="@+id/Homebtn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="48dp"
-        android:layout_marginEnd="49dp"
-        android:layout_marginBottom="16dp"
-        android:backgroundTint="#2E487B"
-        android:text="Home"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/Sellbtn"
-        app:layout_constraintStart_toEndOf="@+id/Buybtn" />
-
-    <Button
-        android:id="@+id/Sellbtn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="16dp"
-        android:layout_marginBottom="16dp"
-        android:backgroundTint="#2E487B"
-        android:text="Sell"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+    <include
+        layout="@layout/toolbar"/>
 
     <LinearLayout
-        android:layout_width="384dp"
-        android:layout_height="454dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
         android:layout_marginStart="1dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="1dp"
-        android:layout_marginBottom="1dp"
+        android:layout_marginBottom="8dp"
         android:orientation="vertical"
-        app:layout_constraintBottom_toTopOf="@+id/Buybtn"
+        android:padding="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.48"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0">
+        tools:ignore="UnknownIdInLayout">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/imageView6"
+                android:layout_width="296dp"
+                android:layout_height="136dp"
+                android:layout_gravity="center"
+                app:srcCompat="@drawable/add" />
+
+            <TextView
+                android:id="@+id/textView13"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text="Agregar Imagen" />
+        </LinearLayout>
 
         <EditText
             android:id="@+id/edtUser"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:background="#DCE6FB"
+            android:background="@drawable/form_editable"
             android:ems="10"
             android:hint="Nombre del cuadro"
             android:inputType="textPersonName"
@@ -72,7 +61,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:background="#DCE6FB"
+            android:background="@drawable/form_editable"
             android:ems="10"
             android:hint="Descripcion"
             android:inputType="textPersonName"
@@ -83,7 +72,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:background="#DCE6FB"
+            android:background="@drawable/form_editable"
             android:ems="10"
             android:hint="Nombre del pintor"
             android:inputType="textPersonName"
@@ -94,7 +83,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:background="#DCE6FB"
+            android:background="@drawable/form_editable"
             android:ems="10"
             android:hint="Corriente artistica"
             android:inputType="textPersonName"
@@ -102,7 +91,7 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="91dp"
             android:orientation="horizontal">
 
             <EditText
@@ -112,7 +101,7 @@
                 android:layout_marginTop="10dp"
                 android:layout_marginRight="5dp"
                 android:layout_weight="1"
-                android:background="#DCE6FB"
+                android:background="@drawable/form_editable"
                 android:ems="10"
                 android:hint="Precio"
                 android:inputType="textPersonName"
@@ -127,5 +116,61 @@
                 android:text="Acepto Cambios" />
 
         </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="61dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:layout_weight="1"
+                android:backgroundTint="#6370B5"
+                android:text="Cancelar" />
+
+            <Button
+                android:id="@+id/button2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:backgroundTint="#3F51B5"
+                android:text="Añadir" />
+        </LinearLayout>
+
     </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout6"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#E4E4E4"
+        android:orientation="horizontal"
+        android:paddingTop="5dp"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <ImageView
+            android:id="@+id/imageViewMSC"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/cart" />
+
+        <ImageView
+            android:id="@+id/imageViewMSH"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/home" />
+
+        <ImageView
+            android:id="@+id/imageViewMSS"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/picture_blue" />
+    </LinearLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
