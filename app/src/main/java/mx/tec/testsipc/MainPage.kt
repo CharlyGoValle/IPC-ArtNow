@@ -3,6 +3,7 @@ package mx.tec.testsipc
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
+import android.widget.ImageView
 import androidx.appcompat.app.AppCompatActivity
 
 class MainPage : AppCompatActivity() {
@@ -10,8 +11,9 @@ class MainPage : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.main_page)
 
-        val buy = findViewById<Button>(R.id.BuybtnMP)
-        val sell = findViewById<Button>(R.id.Sellbtn)
+        val buy = findViewById<ImageView>(R.id.imageViewMPC)
+        val sell = findViewById<ImageView>(R.id.imageViewMPS)
+        val user = findViewById<ImageView>(R.id.userSettings)
 
 
         buy.setOnClickListener() {
@@ -20,6 +22,10 @@ class MainPage : AppCompatActivity() {
         }
         sell.setOnClickListener() {
             val intent = Intent(this@MainPage, MainPageSell::class.java)
+            startActivity(intent)
+        }
+        user.setOnClickListener() {
+            val intent = Intent(this@MainPage, UserSettings::class.java)
             startActivity(intent)
         }
 
